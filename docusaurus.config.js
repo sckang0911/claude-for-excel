@@ -52,7 +52,7 @@ const config = {
         disableSwitch: false,
       },
       navbar: {
-        title: 'Claude for Excel',
+        title: 'Jubo Claude for Excel Mini Course',
         logo: {
           alt: '智齡科技',
           src: 'img/logo.svg',

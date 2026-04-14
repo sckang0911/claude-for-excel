@@ -10,6 +10,81 @@
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --ifm-font-family-base: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+  --sidebar-bg: #0d3d4a;
+  --sidebar-text: rgba(255, 255, 255, 0.82);
+}
+
+/* ── 1. 隱藏右側 TOC 欄 ── */
+.theme-doc-toc-desktop {
+  display: none !important;
+}
+
+[class*="docItemCol"] {
+  max-width: 100% !important;
+  flex: 0 0 100% !important;
+}
+
+/* ── 2. 內容欄白底深字 ── */
+.markdown {
+  color: #1a1a2e;
+}
+
+/* ── 3. 標題縮小、教科書風格 ── */
+.markdown h1 {
+  font-size: 1.7rem !important;
+  font-weight: 700;
+  color: #0d3d4a;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 0.4rem;
+  margin-bottom: 1.2rem;
+}
+
+.markdown h2 {
+  font-size: 1.15rem !important;
+  font-weight: 600;
+  color: #1F4E79;
+  margin-top: 2rem;
+}
+
+.markdown h3 {
+  font-size: 1rem !important;
+  font-weight: 600;
+}
+
+/* ── 4. 左側課程欄：深藍綠底、淺色字 ── */
+.theme-doc-sidebar-container {
+  background-color: var(--sidebar-bg) !important;
+  border-right: none !important;
+}
+
+.menu {
+  background-color: var(--sidebar-bg) !important;
+}
+
+.menu__link {
+  color: var(--sidebar-text) !important;
+  border-radius: 6px;
+}
+
+.menu__link:hover {
+  background-color: rgba(255, 255, 255, 0.12) !important;
+  color: #ffffff !important;
+}
+
+.menu__link--active,
+.menu__link--active:hover {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+.menu__list-item-collapsible .menu__link {
+  color: rgba(255, 255, 255, 0.95) !important;
+  font-weight: 600;
+}
+
+.menu__caret::before {
+  border-color: rgba(255, 255, 255, 0.6) !important;
 }
 
 [data-theme='dark'] {
