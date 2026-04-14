@@ -63,6 +63,24 @@
   display: none;
 }
 
+/* ── Sidebar Stage Labels ──────────────────── */
+.sidebar-stage-label {
+  margin: 20px 12px 6px;
+  padding: 4px 0 6px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--jubo-teal);
+}
+
+/* 第一個 stage label 不需要上邊框 */
+.menu > .menu__list > li:nth-child(2) .sidebar-stage-label {
+  border-top: none;
+  margin-top: 8px;
+}
+
 /* ── Left Sidebar ──────────────────────────── */
 .theme-doc-sidebar-container {
   background: var(--sidebar-bg) !important;
