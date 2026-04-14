@@ -54,10 +54,16 @@ const config = {
       navbar: {
         title: 'Jubo Mini Course (Claude for Excel)',
         logo: {
-          alt: 'Jubo',
+          alt: '',
           src: 'img/jubo-logo-transparent.png',
         },
-        items: [],
+        items: [
+          {
+            type: 'html',
+            position: 'right',
+            value: '<img src="/claude-for-excel/img/jubo-logo-transparent.png" style="height:30px;width:auto;display:block;" alt="Jubo" />',
+          },
+        ],
       },
       footer: {
         style: 'dark',

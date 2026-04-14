@@ -49,9 +49,7 @@
 }
 
 .navbar__logo {
-  height: 32px;
-  width: auto;
-  margin-right: 4px;
+  display: none;
 }
 
 .navbar__title {
