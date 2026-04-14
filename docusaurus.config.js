@@ -52,10 +52,10 @@ const config = {
         disableSwitch: false,
       },
       navbar: {
-        title: '',
+        title: 'Jubo Mini Course (Claude for Excel)',
         logo: {
-          alt: 'Jubo 智齡科技',
-          src: 'img/jubo-logo.svg',
+          alt: 'Jubo',
+          src: 'img/jubo-logo-transparent.png',
         },
         items: [],
       },
