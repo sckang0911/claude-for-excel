@@ -1,0 +1,163 @@
+/* ── Jubo Brand Colors ── */
+:root {
+  --ifm-color-primary: #1F4E79;
+  --ifm-color-primary-dark: #1a4268;
+  --ifm-color-primary-darker: #183d60;
+  --ifm-color-primary-darkest: #13324f;
+  --ifm-color-primary-light: #245a8a;
+  --ifm-color-primary-lighter: #275f92;
+  --ifm-color-primary-lightest: #2d6fa8;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-font-family-base: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #4da6ff;
+  --ifm-color-primary-dark: #2196f3;
+  --ifm-color-primary-darker: #1e88e5;
+  --ifm-color-primary-darkest: #1565c0;
+  --ifm-color-primary-light: #63b3ff;
+  --ifm-color-primary-lighter: #79bfff;
+  --ifm-color-primary-lightest: #a8d4ff;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* ── Hero Banner ── */
+.hero--primary {
+  background: linear-gradient(135deg, #1F4E79 0%, #2d6fa8 100%);
+}
+
+.hero__title {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.hero__subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* ── Course Cards ── */
+.course-card {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.course-card:hover {
+  box-shadow: 0 4px 20px rgba(31, 78, 121, 0.15);
+  transform: translateY(-2px);
+}
+
+.course-card h3 {
+  color: var(--ifm-color-primary);
+  margin-bottom: 0.5rem;
+}
+
+/* ── Level badges ── */
+.level-badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-right: 6px;
+  margin-bottom: 6px;
+}
+
+.badge-green  { background: #e2f0d9; color: #375623; }
+.badge-blue   { background: #deeaf1; color: #1F4E79; }
+.badge-orange { background: #fce4d6; color: #833c0b; }
+.badge-red    { background: #ffd7cc; color: #c00000; }
+
+/* ── Lesson meta info box ── */
+.lesson-meta {
+  background: #f8f9fa;
+  border-left: 4px solid var(--ifm-color-primary);
+  border-radius: 0 8px 8px 0;
+  padding: 1rem 1.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.lesson-meta span {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* ── Claude prompt blocks ── */
+.claude-prompt {
+  background: #EBF3FB;
+  border: 1px solid #c5d8ed;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin: 1rem 0;
+  font-family: 'Courier New', monospace;
+  font-size: 0.95rem;
+  color: #1F4E79;
+  white-space: pre-wrap;
+}
+
+/* ── Step sections ── */
+.step-header {
+  background: var(--ifm-color-primary);
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  display: inline-block;
+}
+
+/* ── Tables ── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background: var(--ifm-color-primary);
+  color: white;
+}
+
+/* ── Navbar logo area ── */
+.navbar__title {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* ── Footer ── */
+.footer__title {
+  font-weight: 600;
+}
+
+/* ── Download button ── */
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--ifm-color-primary);
+  color: white !important;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none !important;
+  margin: 1rem 0;
+  transition: background 0.2s;
+}
+
+.download-btn:hover {
+  background: var(--ifm-color-primary-dark);
+  color: white !important;
+}
+
+/* ── Admonition (tips, notes) ── */
+.alert--info {
+  border-left-color: var(--ifm-color-primary);
+}
