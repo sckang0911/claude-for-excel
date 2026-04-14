@@ -52,60 +52,16 @@ const config = {
         disableSwitch: false,
       },
       navbar: {
-        title: 'Jubo Claude for Excel Mini Course',
+        title: '',
         logo: {
-          alt: '智齡科技',
-          src: 'img/logo.svg',
+          alt: 'Jubo 智齡科技',
+          src: 'img/jubo-logo.svg',
         },
-        items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'courseSidebar',
-            position: 'left',
-            label: '開始學習',
-          },
-          {
-            href: 'https://jubo.health',
-            label: '智齡科技官網',
-            position: 'right',
-          },
-          {
-            href: 'https://github.com/sckang0911/claude-for-excel',
-            label: 'GitHub',
-            position: 'right',
-          },
-        ],
+        items: [],
       },
       footer: {
         style: 'dark',
-        links: [
-          {
-            title: '課程',
-            items: [
-              { label: '課程地圖', to: '/' },
-              { label: 'Level 1｜讀', to: '/L1/' },
-              { label: 'Level 2｜找', to: '/L2/' },
-              { label: 'Level 3｜算', to: '/L3/' },
-              { label: 'Level 4｜畫', to: '/L4/' },
-            ],
-          },
-          {
-            title: '進階課程',
-            items: [
-              { label: 'Level 5｜會', to: '/L5/' },
-              { label: 'Level 6｜查', to: '/L6/' },
-              { label: 'Level 7｜報', to: '/L7/' },
-              { label: 'Level 8｜測', to: '/L8/' },
-            ],
-          },
-          {
-            title: '智齡科技',
-            items: [
-              { label: '官網', href: 'https://jubo.health' },
-              { label: 'GitHub', href: 'https://github.com/sckang0911/claude-for-excel' },
-            ],
-          },
-        ],
+        links: [],
         copyright: `© ${new Date().getFullYear()} 智齡科技 Jubo Technology｜本課程免費開放使用`,
       },
       prism: {

@@ -6,11 +6,11 @@ const sidebars = {
     {
       type: 'doc',
       id: 'index',
-      label: '📍 課程地圖',
+      label: '課程地圖',
     },
     {
       type: 'category',
-      label: '🟢 Level 1｜讀 — 從表格讀出答案',
+      label: 'Level 1｜讀 — 從表格讀出答案',
       collapsed: false,
       items: [
         'L1/index',
@@ -23,7 +23,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: '🟢 Level 2｜找 — 找出資料中的問題',
+      label: 'Level 2｜找 — 找出資料中的問題',
       collapsed: true,
       items: [
         'L2/index',
@@ -36,7 +36,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: '🔵 Level 3｜算 — 讓 Excel 自動運算',
+      label: 'Level 3｜算 — 讓 Excel 自動運算',
       collapsed: true,
       items: [
         'L3/index',
@@ -49,7 +49,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: '🔵 Level 4｜畫 — 把數字變成圖',
+      label: 'Level 4｜畫 — 把數字變成圖',
       collapsed: true,
       items: [
         'L4/index',
@@ -62,11 +62,11 @@ const sidebars = {
     },
     {
       type: 'html',
-      value: '<hr/><small style="padding:0 12px;color:#999">完成 L1–L4 後，按需求選擇：</small>',
+      value: '<div style="margin:12px 16px;border-top:1px solid rgba(255,255,255,0.1);padding-top:12px;font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.4)">進階應用</div>',
     },
     {
       type: 'category',
-      label: '🟠 Level 5｜合 — 跨表整合與比對',
+      label: 'Level 5｜合 — 跨表整合與比對',
       collapsed: true,
       items: [
         'L5/index',
@@ -79,7 +79,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: '🟠 Level 6｜查 — 對帳、稽核、驗證',
+      label: 'Level 6｜查 — 對帳、稽核、驗證',
       collapsed: true,
       items: [
         'L6/index',
@@ -92,7 +92,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: '🔴 Level 7｜報 — 管理報表與摘要',
+      label: 'Level 7｜報 — 管理報表與摘要',
       collapsed: true,
       items: [
         'L7/index',
@@ -105,7 +105,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: '🔴 Level 8｜測 — 預測、模型、決策',
+      label: 'Level 8｜測 — 預測、模型、決策',
       collapsed: true,
       items: [
         'L8/index',

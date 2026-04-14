@@ -1,20 +1,133 @@
-/* ── Jubo Brand Colors ── */
+/* ═══════════════════════════════════════════
+   Jubo EDU — Professional Course Design
+   Inspired by LinkedIn Learning / Coursera
+   ═══════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 :root {
-  --ifm-color-primary: #1F4E79;
-  --ifm-color-primary-dark: #1a4268;
-  --ifm-color-primary-darker: #183d60;
-  --ifm-color-primary-darkest: #13324f;
-  --ifm-color-primary-light: #245a8a;
-  --ifm-color-primary-lighter: #275f92;
-  --ifm-color-primary-lightest: #2d6fa8;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-  --ifm-font-family-base: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
-  --sidebar-bg: #0d3d4a;
-  --sidebar-text: rgba(255, 255, 255, 0.82);
+  /* Brand */
+  --jubo-teal:        #00C8B4;
+  --jubo-teal-dark:   #00a898;
+
+  /* Sidebar */
+  --sidebar-bg:       #0f172a;
+  --sidebar-border:   rgba(255,255,255,0.06);
+  --sidebar-text:     rgba(255,255,255,0.62);
+  --sidebar-text-hover: rgba(255,255,255,0.92);
+  --sidebar-active-bg: rgba(0,200,180,0.12);
+  --sidebar-active-text: #00C8B4;
+
+  /* Content */
+  --content-bg:       #ffffff;
+  --text-primary:     #0f172a;
+  --text-secondary:   #475569;
+  --border-color:     #e2e8f0;
+
+  /* Docusaurus overrides */
+  --ifm-color-primary:          #00a898;
+  --ifm-color-primary-dark:     #009080;
+  --ifm-color-primary-darker:   #008070;
+  --ifm-color-primary-darkest:  #006050;
+  --ifm-color-primary-light:    #00C8B4;
+  --ifm-color-primary-lighter:  #00d8c4;
+  --ifm-color-primary-lightest: #00e8d4;
+  --ifm-font-family-base:       'Inter', 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+  --ifm-code-font-size:         93%;
+  --ifm-navbar-height:          56px;
+  --ifm-sidebar-width:          272px;
+  --docusaurus-highlighted-code-line-bg: rgba(0,200,180,0.08);
 }
 
-/* ── 1. 隱藏右側 TOC 欄 ── */
+/* ── Navbar ────────────────────────────────── */
+.navbar {
+  background: #0f172a;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  box-shadow: none;
+  padding: 0 24px;
+  height: var(--ifm-navbar-height);
+}
+
+.navbar__logo {
+  height: 28px;
+}
+
+.navbar__title {
+  display: none;
+}
+
+.navbar__items--right {
+  display: none;
+}
+
+/* ── Left Sidebar ──────────────────────────── */
+.theme-doc-sidebar-container {
+  background: var(--sidebar-bg) !important;
+  border-right: 1px solid var(--sidebar-border) !important;
+}
+
+.menu {
+  background: var(--sidebar-bg) !important;
+  padding: 16px 8px !important;
+  font-size: 0.82rem;
+}
+
+/* Category headers */
+.menu__list-item-collapsible > .menu__link {
+  color: rgba(255,255,255,0.9) !important;
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.01em;
+  padding: 7px 12px;
+  border-radius: 6px;
+}
+
+.menu__list-item-collapsible > .menu__link:hover {
+  background: rgba(255,255,255,0.06) !important;
+  color: #ffffff !important;
+}
+
+/* Regular links */
+.menu__link {
+  color: var(--sidebar-text) !important;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  transition: all 0.15s ease;
+}
+
+.menu__link:hover {
+  background: rgba(255,255,255,0.06) !important;
+  color: var(--sidebar-text-hover) !important;
+}
+
+/* Active link */
+.menu__link--active {
+  background: var(--sidebar-active-bg) !important;
+  color: var(--sidebar-active-text) !important;
+  font-weight: 500;
+}
+
+.menu__link--active:hover {
+  background: var(--sidebar-active-bg) !important;
+  color: var(--sidebar-active-text) !important;
+}
+
+/* Caret */
+.menu__caret::before {
+  border-color: rgba(255,255,255,0.4) !important;
+}
+
+/* Top-level "課程地圖" link */
+.menu > .menu__list > .menu__list-item:first-child .menu__link {
+  color: rgba(255,255,255,0.5) !important;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+/* ── Hide Right TOC ────────────────────────── */
 .theme-doc-toc-desktop {
   display: none !important;
 }
@@ -24,215 +137,169 @@
   flex: 0 0 100% !important;
 }
 
-/* ── 2. 內容欄白底深字 ── */
-.markdown {
-  color: #1a1a2e;
+/* ── Content Area ──────────────────────────── */
+.docMainContainer_node_modules-\@docusaurus-theme-classic-lib-theme-DocPage-Layout-Main-styles-module,
+[class*="docMainContainer"] {
+  background: #f8fafc;
 }
 
-/* ── 3. 標題縮小、教科書風格 ── */
+article {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 40px 48px;
+  margin: 24px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+/* ── Typography ────────────────────────────── */
+.markdown {
+  color: var(--text-primary);
+  line-height: 1.7;
+  font-size: 0.93rem;
+}
+
 .markdown h1 {
-  font-size: 1.7rem !important;
+  font-size: 1.55rem !important;
   font-weight: 700;
-  color: #0d3d4a;
-  border-bottom: 2px solid #e0e0e0;
-  padding-bottom: 0.4rem;
-  margin-bottom: 1.2rem;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.6rem;
+  margin-bottom: 1.4rem;
+  letter-spacing: -0.01em;
 }
 
 .markdown h2 {
-  font-size: 1.15rem !important;
+  font-size: 1.05rem !important;
   font-weight: 600;
-  color: #1F4E79;
-  margin-top: 2rem;
+  color: #1e293b;
+  margin-top: 2.2rem;
+  margin-bottom: 0.6rem;
 }
 
 .markdown h3 {
-  font-size: 1rem !important;
+  font-size: 0.93rem !important;
   font-weight: 600;
+  color: #334155;
 }
 
-/* ── 4. 左側課程欄：深藍綠底、淺色字 ── */
-.theme-doc-sidebar-container {
-  background-color: var(--sidebar-bg) !important;
-  border-right: none !important;
-}
-
-.menu {
-  background-color: var(--sidebar-bg) !important;
-}
-
-.menu__link {
-  color: var(--sidebar-text) !important;
-  border-radius: 6px;
-}
-
-.menu__link:hover {
-  background-color: rgba(255, 255, 255, 0.12) !important;
-  color: #ffffff !important;
-}
-
-.menu__link--active,
-.menu__link--active:hover {
-  background-color: rgba(255, 255, 255, 0.2) !important;
-  color: #ffffff !important;
-  font-weight: 600;
-}
-
-.menu__list-item-collapsible .menu__link {
-  color: rgba(255, 255, 255, 0.95) !important;
-  font-weight: 600;
-}
-
-.menu__caret::before {
-  border-color: rgba(255, 255, 255, 0.6) !important;
-}
-
-[data-theme='dark'] {
-  --ifm-color-primary: #4da6ff;
-  --ifm-color-primary-dark: #2196f3;
-  --ifm-color-primary-darker: #1e88e5;
-  --ifm-color-primary-darkest: #1565c0;
-  --ifm-color-primary-light: #63b3ff;
-  --ifm-color-primary-lighter: #79bfff;
-  --ifm-color-primary-lightest: #a8d4ff;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-}
-
-/* ── Hero Banner ── */
-.hero--primary {
-  background: linear-gradient(135deg, #1F4E79 0%, #2d6fa8 100%);
-}
-
-.hero__title {
-  font-size: 2.5rem;
-  font-weight: 800;
-}
-
-.hero__subtitle {
-  font-size: 1.2rem;
-  opacity: 0.9;
-}
-
-/* ── Course Cards ── */
-.course-card {
-  border: 1px solid var(--ifm-color-emphasis-300);
-  border-radius: 8px;
-  padding: 1.5rem;
-  margin-bottom: 1rem;
-  transition: box-shadow 0.2s, transform 0.2s;
-}
-
-.course-card:hover {
-  box-shadow: 0 4px 20px rgba(31, 78, 121, 0.15);
-  transform: translateY(-2px);
-}
-
-.course-card h3 {
-  color: var(--ifm-color-primary);
-  margin-bottom: 0.5rem;
-}
-
-/* ── Level badges ── */
-.level-badge {
-  display: inline-block;
-  padding: 2px 10px;
-  border-radius: 12px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  margin-right: 6px;
-  margin-bottom: 6px;
-}
-
-.badge-green  { background: #e2f0d9; color: #375623; }
-.badge-blue   { background: #deeaf1; color: #1F4E79; }
-.badge-orange { background: #fce4d6; color: #833c0b; }
-.badge-red    { background: #ffd7cc; color: #c00000; }
-
-/* ── Lesson meta info box ── */
+/* ── Lesson Meta ───────────────────────────── */
 .lesson-meta {
-  background: #f8f9fa;
-  border-left: 4px solid var(--ifm-color-primary);
-  border-radius: 0 8px 8px 0;
-  padding: 1rem 1.5rem;
+  background: #f8fafc;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 12px 20px;
   margin-bottom: 2rem;
   display: flex;
-  gap: 2rem;
+  gap: 24px;
   flex-wrap: wrap;
 }
 
 .lesson-meta span {
-  font-size: 0.9rem;
-  color: #555;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-weight: 500;
 }
 
-/* ── Claude prompt blocks ── */
-.claude-prompt {
-  background: #EBF3FB;
-  border: 1px solid #c5d8ed;
-  border-radius: 8px;
-  padding: 1rem 1.25rem;
-  margin: 1rem 0;
-  font-family: 'Courier New', monospace;
-  font-size: 0.95rem;
-  color: #1F4E79;
-  white-space: pre-wrap;
-}
-
-/* ── Step sections ── */
+/* ── Step Headers ──────────────────────────── */
 .step-header {
-  background: var(--ifm-color-primary);
-  color: white;
-  padding: 0.4rem 1rem;
-  border-radius: 6px;
+  background: #0f172a;
+  color: rgba(255,255,255,0.92);
+  padding: 5px 14px;
+  border-radius: 5px;
   font-weight: 600;
-  margin-top: 1.5rem;
-  margin-bottom: 0.75rem;
+  font-size: 0.82rem;
+  margin-top: 1.8rem;
+  margin-bottom: 0.8rem;
   display: inline-block;
+  letter-spacing: 0.02em;
 }
 
-/* ── Tables ── */
-table {
-  width: 100%;
-  border-collapse: collapse;
+/* ── Claude Prompt Block ───────────────────── */
+.claude-prompt {
+  background: #f0fdfa;
+  border: 1px solid #99f6e4;
+  border-left: 3px solid var(--jubo-teal);
+  border-radius: 6px;
+  padding: 16px 20px;
+  margin: 16px 0;
+  font-family: 'SF Mono', 'Fira Code', 'Courier New', monospace;
+  font-size: 0.87rem;
+  color: #134e4a;
+  white-space: pre-wrap;
+  line-height: 1.6;
 }
 
-th {
-  background: var(--ifm-color-primary);
-  color: white;
-}
-
-/* ── Navbar logo area ── */
-.navbar__title {
-  font-weight: 700;
-  font-size: 1.1rem;
-}
-
-/* ── Footer ── */
-.footer__title {
-  font-weight: 600;
-}
-
-/* ── Download button ── */
+/* ── Download Button ───────────────────────── */
 .download-btn {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: var(--ifm-color-primary);
-  color: white !important;
-  padding: 8px 20px;
+  background: var(--jubo-teal);
+  color: #ffffff !important;
+  padding: 9px 20px;
   border-radius: 6px;
   font-weight: 600;
+  font-size: 0.87rem;
   text-decoration: none !important;
-  margin: 1rem 0;
-  transition: background 0.2s;
+  margin: 12px 0;
+  transition: background 0.15s ease, transform 0.1s ease;
+  box-shadow: 0 1px 4px rgba(0,200,180,0.3);
 }
 
 .download-btn:hover {
-  background: var(--ifm-color-primary-dark);
-  color: white !important;
+  background: var(--jubo-teal-dark);
+  color: #ffffff !important;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(0,200,180,0.35);
 }
 
-/* ── Admonition (tips, notes) ── */
+/* ── Tables ────────────────────────────────── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.87rem;
+}
+
+th {
+  background: #0f172a;
+  color: rgba(255,255,255,0.9);
+  font-weight: 600;
+  padding: 10px 16px;
+  text-align: left;
+}
+
+td {
+  padding: 9px 16px;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+tr:nth-child(even) td {
+  background: #f8fafc;
+}
+
+/* ── Footer ────────────────────────────────── */
+.footer {
+  background: #0f172a;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  padding: 20px 0;
+}
+
+.footer__copyright {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  text-align: center;
+}
+
+/* ── Badges ────────────────────────────────── */
+.badge-green  { background: #dcfce7; color: #166534; padding: 2px 10px; border-radius: 10px; font-size: 0.75rem; font-weight: 600; }
+.badge-blue   { background: #dbeafe; color: #1e40af; padding: 2px 10px; border-radius: 10px; font-size: 0.75rem; font-weight: 600; }
+.badge-orange { background: #ffedd5; color: #9a3412; padding: 2px 10px; border-radius: 10px; font-size: 0.75rem; font-weight: 600; }
+.badge-red    { background: #fee2e2; color: #991b1b; padding: 2px 10px; border-radius: 10px; font-size: 0.75rem; font-weight: 600; }
+
+/* ── Admonitions ───────────────────────────── */
 .alert--info {
-  border-left-color: var(--ifm-color-primary);
+  border-left-color: var(--jubo-teal);
+  background: #f0fdfa;
 }
